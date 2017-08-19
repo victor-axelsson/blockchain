@@ -1,6 +1,8 @@
 # About
 From my tutorial series about block chains.
 
+Series: https://www.youtube.com/playlist?list=PLjxbCynJ0Gd-gfKoLILRt-pwPWxe6euBg
+
 # Setup
 - `npm install` 
 
@@ -13,3 +15,5 @@ to start, for example, node1 run:
 
 To start node two run: 
 - `node node node2`
+
+blockchain, blockchains, nodejs, block, chain, hash, double spending, sha256
