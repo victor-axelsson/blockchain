@@ -1,0 +1,18 @@
+{
+	"id": "node2",
+	"port": 3002,
+	"behaviours": [{
+		"tag": "receiveGenesisBlock"
+	},{
+		"tag": "buy1",
+		"params": {
+			"transactions": [{
+				"amount": 100,
+				"debit": "node1",
+				"credit": "node2"
+			}]
+		}
+	},{
+		"tag": "mine"
+	}]
+}
