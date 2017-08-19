@@ -40,7 +40,7 @@ genesis.getGenesisBlock = () => {
 		genesisBlock.hash = sha256(strVal); 
 	}
 
-	console.log(strVal);
+	//console.log(strVal);
 
 	return genesisBlock;  
 }

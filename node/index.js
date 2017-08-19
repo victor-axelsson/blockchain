@@ -41,7 +41,10 @@ var onNodeBehaviourAllDone = (err, res) => {
 	if(!!err){
 		console.log(err); 
 	}
-	console.log(res); 
+
+	console.log(behaviours.getBlockChain())
+
+	//console.log(res); 
 	console.log("==== <" + config.id + " />===="); 
 }
 
@@ -52,6 +55,7 @@ app.post('/blockchain', function (req, res) {
 	console.log("[" + config.id + "] received block chain from [" + req.body.sender + "]"); 
 
 	behaviours.mergeChain(req.body.message, (err, response) => {
+
 
 		console.log("=== < Balance > ===")
 		console.log(behaviours.calculateBalances()); 
@@ -65,7 +69,6 @@ app.post('/blockchain', function (req, res) {
 			res.status(200).send("All was ok"); 
 		}
 	});
-
 });
 
 //Start up a server

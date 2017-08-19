@@ -27,8 +27,6 @@ block.create = (blockNr, prev, data) => {
 */
 block.verifyChain = (chain) => {
 
-	console.log(chain); 
-
 	for(var i = 1; i < chain.length; i++){
 		var prev = chain[i -1]; 
 		var curr = chain[i]; 
@@ -41,7 +39,7 @@ block.verifyChain = (chain) => {
 		if(prevHash !== prev.hash){
 			return false; 
 		}
-
+		
 		//The chain was not valid, maybe someone tried to insert something here
 		if(prevHash !== curr.previous){
 			return false;
@@ -67,7 +65,7 @@ block.mine = (_block, prefix = "0000") => {
 		_block.hash = sha256(strVal); 
 	}
 
-	console.log(strVal)
+	//console.log(strVal)
 
 	return _block; 
 }
